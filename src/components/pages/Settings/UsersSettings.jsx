@@ -16,7 +16,7 @@ const USUARIOS_MOCK = [
   { id: 4, firstname: 'Elena', lastname: 'Gómez', numeroCelular: '5566778899', createdAt: '2026-02-18 17:40', updatedAt: '2026-10-19 12:30', rol: 'Administrador', estado: 'activo' },
 ];
 
-export function UserSettings() {
+const UserSettings = () => {
   const [busqueda, setBusqueda] = useState('');
   const [usuarioSeleccionado, setUsuarioSeleccionado] = useState(USUARIOS_MOCK[0]);
   const [esEdicion, setEsEdicion] = useState(false);
@@ -242,3 +242,5 @@ export function UserSettings() {
     
   );
 }
+
+export default UserSettings;
