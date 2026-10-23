@@ -34,7 +34,7 @@ import { Route as SalesRouteImport } from './routes/sales'
 import { Route as SalesHistoryRouteImport } from './routes/salesHistory'
 import { Route as SalesIncomesRouteImport } from './routes/salesIncomes'
 import { Route as TimeAttendenceSettingsRouteImport } from './routes/timeAttendenceSettings'
-import { Route as UserSettingsRouteImport } from './routes/userSettings'
+import { Route as UsersSettingsRouteImport } from './routes/usersSettings'
 import { Route as _authenticatedDashboardRouteImport } from './routes/__authenticated/dashboard'
 import { Route as _authenticatedHomePageRouteImport } from './routes/__authenticated/homePage'
 import { Route as _authenticatedSettingsRouteImport } from './routes/__authenticated/settings'
@@ -165,9 +165,9 @@ const TimeAttendenceSettingsRoute = TimeAttendenceSettingsRouteImport.update({
   path: '/timeAttendenceSettings',
   getParentRoute: () => rootRouteImport,
 } as any)
-const UserSettingsRoute = UserSettingsRouteImport.update({
-  id: '/userSettings',
-  path: '/userSettings',
+const UsersSettingsRoute = UsersSettingsRouteImport.update({
+  id: '/usersSettings',
+  path: '/usersSettings',
   getParentRoute: () => rootRouteImport,
 } as any)
 const _authenticatedDashboardRoute = _authenticatedDashboardRouteImport.update({
@@ -225,7 +225,7 @@ export interface FileRoutesByFullPath {
   '/salesHistory': typeof SalesHistoryRoute
   '/salesIncomes': typeof SalesIncomesRoute
   '/timeAttendenceSettings': typeof TimeAttendenceSettingsRoute
-  '/userSettings': typeof UserSettingsRoute
+  '/usersSettings': typeof UsersSettingsRoute
   '/dashboard': typeof _authenticatedDashboardRoute
   '/homePage': typeof _authenticatedHomePageRoute
   '/settings': typeof _authenticatedSettingsRoute
@@ -257,7 +257,7 @@ export interface FileRoutesByTo {
   '/salesHistory': typeof SalesHistoryRoute
   '/salesIncomes': typeof SalesIncomesRoute
   '/timeAttendenceSettings': typeof TimeAttendenceSettingsRoute
-  '/userSettings': typeof UserSettingsRoute
+  '/usersSettings': typeof UsersSettingsRoute
   '/dashboard': typeof _authenticatedDashboardRoute
   '/homePage': typeof _authenticatedHomePageRoute
   '/settings': typeof _authenticatedSettingsRoute
@@ -292,7 +292,7 @@ export interface FileRoutesById {
   '/salesHistory': typeof SalesHistoryRoute
   '/salesIncomes': typeof SalesIncomesRoute
   '/timeAttendenceSettings': typeof TimeAttendenceSettingsRoute
-  '/userSettings': typeof UserSettingsRoute
+  '/usersSettings': typeof UsersSettingsRoute
   '/__authenticated/dashboard': typeof _authenticatedDashboardRoute
   '/__authenticated/homePage': typeof _authenticatedHomePageRoute
   '/__authenticated/settings': typeof _authenticatedSettingsRoute
@@ -326,7 +326,7 @@ export interface FileRouteTypes {
     | '/salesHistory'
     | '/salesIncomes'
     | '/timeAttendenceSettings'
-    | '/userSettings'
+    | '/usersSettings'
     | '/dashboard'
     | '/homePage'
     | '/settings'
@@ -358,7 +358,7 @@ export interface FileRouteTypes {
     | '/salesHistory'
     | '/salesIncomes'
     | '/timeAttendenceSettings'
-    | '/userSettings'
+    | '/usersSettings'
     | '/dashboard'
     | '/homePage'
     | '/settings'
@@ -392,7 +392,7 @@ export interface FileRouteTypes {
     | '/salesHistory'
     | '/salesIncomes'
     | '/timeAttendenceSettings'
-    | '/userSettings'
+    | '/usersSettings'
     | '/__authenticated/dashboard'
     | '/__authenticated/homePage'
     | '/__authenticated/settings'
@@ -427,7 +427,7 @@ export interface RootRouteChildren {
   SalesHistoryRoute: typeof SalesHistoryRoute
   SalesIncomesRoute: typeof SalesIncomesRoute
   TimeAttendenceSettingsRoute: typeof TimeAttendenceSettingsRoute
-  UserSettingsRoute: typeof UserSettingsRoute
+  UsersSettingsRoute: typeof UsersSettingsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -607,11 +607,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TimeAttendenceSettingsRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/userSettings': {
-      id: '/userSettings'
-      path: '/userSettings'
-      fullPath: '/userSettings'
-      preLoaderRoute: typeof UserSettingsRouteImport
+    '/usersSettings': {
+      id: '/usersSettings'
+      path: '/usersSettings'
+      fullPath: '/usersSettings'
+      preLoaderRoute: typeof UsersSettingsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/__authenticated/dashboard': {
@@ -716,7 +716,7 @@ const rootRouteChildren: RootRouteChildren = {
   SalesHistoryRoute: SalesHistoryRoute,
   SalesIncomesRoute: SalesIncomesRoute,
   TimeAttendenceSettingsRoute: TimeAttendenceSettingsRoute,
-  UserSettingsRoute: UserSettingsRoute,
+  UsersSettingsRoute: UsersSettingsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

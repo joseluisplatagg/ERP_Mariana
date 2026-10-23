@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react';
 import { loginUser } from '../api/auth';
 import MainLayout from '../components/layouts/MainLayout'
 import UserLayout from '../components/layouts/UserLayout'
-import  UserSettings from '../components/pages/Settings/usersSettings';
+import  UsersSettings from '../components/pages/Settings/UsersSettings';
 
-export const Route = createFileRoute('/userSettings')({
+export const Route = createFileRoute('/usersSettings')({
   component: UsersSettingsRoute,
 })
 
@@ -27,11 +27,11 @@ function UsersSettingsRoute() {
   // pero lo envuelves en el template que corresponda:
   return isAuthenticate ? (
     <UserLayout>
-      <UserSettings />
+      <UsersSettings />
     </UserLayout>
   ) : (
     <MainLayout>
-      <UserSettings />
+      <UsersSettings />
     </MainLayout>
   )
 }
