@@ -36,7 +36,7 @@ const ROLES_PERMISOS_MOCK = [
   }
 ];
 
-export function PermissionsSettings() {
+const PermissionsSettings = () => {
   // Estados para controlar qué rol está activo y si se están editando sus permisos
   const [rolSeleccionado, setRolSeleccionado] = useState(ROLES_PERMISOS_MOCK[0]);
   const [esEdicion, setEsEdicion] = useState(false);
@@ -204,3 +204,5 @@ export function PermissionsSettings() {
     </div> // Fin del return principal
   );
 }
+
+export default PermissionsSettings;

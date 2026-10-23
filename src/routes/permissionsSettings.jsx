@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { loginUser } from '../api/auth';
 import MainLayout from '../components/layouts/MainLayout'
 import UserLayout from '../components/layouts/UserLayout'
-import { PermissionsSettings } from '../components/pages/Settings/permissionsSettings';
+import PermissionsSettings from '../components/pages/Settings/PermissionsSettings';
 export const Route = createFileRoute('/permissionsSettings')({
   component: PermissionsSettingsRoute,
 })
